@@ -1,13 +1,14 @@
+// app/courses/page.tsx
 import Link from "next/link";
 import { COURSES } from "@/data/courses";
 
 // Paleta por card (faixa e badge)
 const SCHEMES = [
   { bar: "from-indigo-500 to-indigo-600", badge: "bg-indigo-50 ring-indigo-200" },
-  { bar: "from-rose-500 to-rose-600",   badge: "bg-rose-50 ring-rose-200" },
+  { bar: "from-rose-500 to-rose-600", badge: "bg-rose-50 ring-rose-200" },
   { bar: "from-emerald-500 to-emerald-600", badge: "bg-emerald-50 ring-emerald-200" },
   { bar: "from-amber-500 to-amber-600", badge: "bg-amber-50 ring-amber-200" },
-  { bar: "from-sky-500 to-sky-600",     badge: "bg-sky-50 ring-sky-200" },
+  { bar: "from-sky-500 to-sky-600", badge: "bg-sky-50 ring-sky-200" },
   { bar: "from-violet-500 to-violet-600", badge: "bg-violet-50 ring-violet-200" },
 ];
 
