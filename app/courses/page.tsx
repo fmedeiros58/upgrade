@@ -21,6 +21,10 @@ export default function CoursesPage() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {COURSES.map((course, i) => {
             const s = SCHEMES[i % SCHEMES.length];
+
+            // ✅ trata disciplines como opcional (fallback: 0)
+            const dcount = course.disciplines?.length ?? 0;
+
             return (
               <div
                 key={course.slug}
@@ -51,8 +55,7 @@ export default function CoursesPage() {
                           "text-slate-800",
                         ].join(" ")}
                       >
-                        {course.disciplines.length}{" "}
-                        {course.disciplines.length === 1 ? "DISCIPLINA" : "DISCIPLINAS"}
+                        {dcount} {dcount === 1 ? "DISCIPLINA" : "DISCIPLINAS"}
                       </span>
                     </div>
 
