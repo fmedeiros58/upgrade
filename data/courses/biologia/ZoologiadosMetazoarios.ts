@@ -1,0 +1,153 @@
+import type { Discipline } from "../types";
+
+const zoologiaDosMetazoarios: Discipline = {
+  slug: "zoologia-dos-metazoarios",
+  title: "Zoologia dos Metazoários",
+  description:
+    "Panorama comparado dos principais filos de Metazoa: planos corporais, evolução e adaptações.",
+  heroVideo: { youtubeId: "dQw4w9WgXcQ" }, // troque pelo ID real
+  lessons: [
+    {
+      slug: "introducao-aos-metazoarios",
+      title: "Introdução aos Metazoários",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "10:40",
+      description: "Características gerais, origem e diversidade dos animais.",
+    },
+    {
+      slug: "planos-corporais-simetria-e-tecidos",
+      title: "Planos Corporais: Simetria e Tecidos",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "12:15",
+      description: "Assimetria, radial, bilateral; diploblastia vs. triploblastia.",
+    },
+    {
+      slug: "celoma-e-organizacao-interna",
+      title: "Celoma e Organização Interna",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "11:30",
+      description: "Acelomados, pseudocelomados e celomados; implicações funcionais.",
+    },
+    {
+      slug: "porifera",
+      title: "Porifera (Esponjas): Estrutura e Funções",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "13:20",
+      description: "Coanócitos, tipos de canal, reprodução e ecologia.",
+    },
+    {
+      slug: "cnidaria",
+      title: "Cnidaria: Pólipos, Medusas e Cnidócitos",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "14:05",
+      description: "Ciclos de vida, simetria radial e sistemas corporais.",
+    },
+    {
+      slug: "ctenophora",
+      title: "Ctenophora: Biologia e Controvérsias Filogenéticas",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "09:50",
+      description: "Fileiras ciliares, coloblastos e posição evolutiva.",
+    },
+    {
+      slug: "platyhelminthes",
+      title: "Platyhelminthes: Turbelários e Parasitas",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "15:30",
+      description: "Planárias, cestódeos e trematódeos: morfologia e ciclos.",
+    },
+    {
+      slug: "nematoda",
+      title: "Nematoda: Pseudoceloma e Diversidade Ecológica",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "11:55",
+      description: "Cutícula, parasitismo e modelos (C. elegans).",
+    },
+    {
+      slug: "annelida",
+      title: "Annelida: Segmentação e Metameria",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "12:40",
+      description: "Oligoquetas, poliquetas e hirudíneos: sistemas e evolução.",
+    },
+    {
+      slug: "mollusca",
+      title: "Mollusca: Conchas, Rádula e Diversificação",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "18:10",
+      description: "Gastrópodes, bivalves e cefalópodes; convergências notáveis.",
+    },
+    {
+      slug: "arthropoda-i",
+      title: "Arthropoda I: Exoesqueleto, Tagmose e Ecdises",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "16:25",
+      description: "Traqueias, hemolinfa e sucesso adaptativo dos artrópodes.",
+    },
+    {
+      slug: "arthropoda-ii",
+      title: "Arthropoda II: Quelastra, Hexapoda e Crustacea",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "17:00",
+      description: "Diversidade de grupos e estilos de vida.",
+    },
+    {
+      slug: "echinodermata",
+      title: "Echinodermata: Simetria Secundária e Sistema Ambulacral",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "12:20",
+      description: "Asteroidea, Echinoidea, Holothuroidea e regeneração.",
+    },
+    {
+      slug: "chordata-i",
+      title: "Chordata I: Caracteres-Chave e Protocordados",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "14:45",
+      description: "Notocorda, fendas faríngeas; Urochordata e Cephalochordata.",
+    },
+    {
+      slug: "chordata-ii",
+      title: "Chordata II: Vertebrados Basais e Gnathostomata",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "16:35",
+      description: "Linhagens primitivas, mandíbulas e conquistas evolutivas.",
+    },
+    {
+      slug: "locomocao-e-sistemas-musculares",
+      title: "Locomoção e Sistemas Musculares nos Metazoários",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "13:10",
+      description: "Comparações funcionais entre filos e ambientes.",
+    },
+    {
+      slug: "nutricao-e-aparelho-digestorio",
+      title: "Nutrição e Aparelho Digestório: Estratégias Comparadas",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "12:55",
+      description: "Filtradores, predadores e simbiontes — do tubo incompleto ao completo.",
+    },
+    {
+      slug: "reproducao-e-desenvolvimento",
+      title: "Reprodução e Desenvolvimento: Padrões e Ciclos",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "15:20",
+      description: "Fecundação, larvas típicas e metamorfose em diferentes grupos.",
+    },
+    {
+      slug: "filogenia-e-sistematica-dos-animais",
+      title: "Filogenia e Sistemática dos Animais",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "18:30",
+      description: "Metodos, hipóteses atuais e debates (Ecdysozoa/Lophotrochozoa).",
+    },
+    {
+      slug: "adaptacoes-ecologicas-e-conservacao",
+      title: "Adaptações Ecológicas e Conservação",
+      youtubeId: "dQw4w9WgXcQ",
+      duration: "12:05",
+      description: "Biomas, serviços ecossistêmicos e ameaças à fauna.",
+    },
+  ],
+};
+
+export default zoologiaDosMetazoarios;
