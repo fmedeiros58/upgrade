@@ -1,0 +1,38 @@
+﻿name: Construção do projeto
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Build (Next.js)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checar código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Verificar segredos do Supabase
+        run: |
+          test -n "${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}" || (echo "Faltando secret: NEXT_PUBLIC_SUPABASE_URL" && exit 1)
+          test -n "${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}" || (echo "Faltando secret: NEXT_PUBLIC_SUPABASE_ANON_KEY" && exit 1)
+          echo "Secrets presentes (tamanhos mascarados)."
+
+      - name: Instalar dependências
+        run: npm ci --no-audit --no-fund
+
+      - name: Construir aplicação
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          NEXT_TELEMETRY_DISABLED: "1"
+          CI: "true"
+        run: npm run build
