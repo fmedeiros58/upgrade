@@ -1,12 +1,12 @@
 import type { Course } from "../types";
 
-// importe TODAS as disciplinas do curso Biologia:
+// importe TODAS as disciplinas do curso Biologia (caminhos com a MESMA caixa do nome do arquivo):
 import embriologiaComparada from "./embriologiacomparada";
 import geneticaBasica from "./geneticabasica";
-import zoologiaDosMetazoarios from "./zoologiadosmetazoarios";
-import FisiologiaHumana from "./fisiologiahumana"; // ⬅ importa com a mesma caixa do arquivo
-import biologiaCelular from "./biologiacelular";   // ⬅ disciplina adicionada
-import botanicaEstrutural from "./botanicaestrutural"; // ⬅ nova disciplina adicionada
+import zoologiaDosMetazoarios from "./ZoologiadosMetazoarios"; // <-- atenção ao Z maiúsculo
+import FisiologiaHumana from "./fisiologiahumana";
+import biologiaCelular from "./biologiacelular";
+import botanicaEstrutural from "./botanicaestrutural";
 
 const biologia: Course = {
   slug: "biologia",
@@ -16,10 +16,11 @@ const biologia: Course = {
     embriologiaComparada,
     geneticaBasica,
     zoologiaDosMetazoarios,
-    FisiologiaHumana,    // ⬅ usa o mesmo identificador do import
-    biologiaCelular,     // ⬅ disciplina adicionada
-    botanicaEstrutural,  // ⬅ nova disciplina adicionada
+    FisiologiaHumana,
+    biologiaCelular,
+    botanicaEstrutural,
   ],
 };
 
 export default biologia;
+
