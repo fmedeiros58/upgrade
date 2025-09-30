@@ -1,0 +1,26 @@
+﻿name: Construção do projeto
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  build:
+    name: Build (Next.js)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checar código
+        uses: actions/checkout@v4
+      - name: Configurar Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - name: Instalar dependências
+        run: npm ci
+      - name: Construir aplicação
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          NEXT_TELEMETRY_DISABLED: "1"
+        run: npm run build
